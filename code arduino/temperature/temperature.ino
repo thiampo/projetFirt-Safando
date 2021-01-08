@@ -12,10 +12,7 @@ void setup(){
 
 void loop(){
   int chk = DHT.read11(DHT11_PIN);
- Serial.println("temperature");
-  Serial.println(DHT.temperature);
-  delay(5000);
-  if (DHT.temperature>26)
+  if (DHT.temperature<=26)
   {
     digitalWrite(ledRouge, HIGH);
     digitalWrite(ledVert, LOW);
@@ -25,6 +22,10 @@ void loop(){
     digitalWrite(ledRouge, LOW);
     digitalWrite(ledVert, HIGH);
   }
+ Serial.println("temperature");
+  Serial.println(DHT.temperature);
+  delay(2000);
+  
   
   
   
