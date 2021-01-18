@@ -27,7 +27,7 @@ const wss = new WebSocket.Server({ port:8082 });//creation d'une instance de l'o
   }); 
 
 app.get('/',(req,res)=>res.end('hello'))
-  app.listen(8081,()=>console.log('connecting'));
+  app.listen(8081,()=>console.log('connecting'));//port pour se conneecter au serveur
 
 
 
